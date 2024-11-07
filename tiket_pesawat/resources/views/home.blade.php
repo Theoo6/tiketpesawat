@@ -23,6 +23,20 @@
             background-repeat: no-repeat; /* Menghindari gambar terulang */
             height: 100vh; /* Mengatur tinggi elemen (misal, seukuran layar) */
         }
+        .container {
+            height: 100%; /* Full height of the parent */
+        }
+
+        .d-flex {
+            display: flex;
+            flex-direction: column; /* Vertically center content */
+            justify-content: center; /* Center vertically */
+            align-items: center; /* Center horizontally */
+        }
+
+        h1, p {
+            margin: 0;
+        }
     </style>
 </head>
 <body>
@@ -30,58 +44,17 @@
   <!-- Hero Section -->
 
   <div class="bg-image">
-    <div class="container text-center text-white py-5">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
-        <h1>Selamat datang di Pemesanan Tiket Pesawat</h1>
-        <p>Pesan tiket pesawat dengan mudah dan cepat.</p>
+    <div class="container text-center text-white py-5 d-flex align-items-center justify-content-center">
+        <div>
+            <h1>Selamat datang di Pemesanan Tiket Pesawat</h1>
+            <p>Pesan tiket pesawat dengan mudah dan cepat.</p>
+        </div>
     </div>
 </div>
-  <!-- Form Pemesanan -->
-  <div class="container mt-5">
-    <h2>Pemesanan Tiket Pesawat</h2>
-    <form>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="asal">Asal</label>
-          <input type="text" class="form-control" id="asal" placeholder="Kota Asal">
-        </div>
-        <div class="form-group col-md-6">
-          <label for="tujuan">Tujuan</label>
-          <input type="text" class="form-control" id="tujuan" placeholder="Kota Tujuan">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="tanggal">Tanggal Keberangkatan</label>
-          <input type="date" class="form-control" id="tanggal">
-        </div>
-        <div class="form-group col-md-6">
-          <label for="penumpang">Jumlah Penumpang</label>
-          <input type="number" class="form-control" id="penumpang" placeholder="Jumlah Penumpang" min="1">
-        </div>
-      </div>
-      <button type="submit" class="btn btn-primary">Cari Tiket</button>
-    </form>
-  </div>
 
   <!-- Tabel Hasil Pencarian Tiket -->
   <div class="container mt-5">
-    <h2>Hasil Pencarian</h2>
+    <h2>Penerbangan</h2>
     <table class="table table-bordered">
       <thead>
         <tr>

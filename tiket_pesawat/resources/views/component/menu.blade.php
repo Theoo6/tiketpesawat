@@ -20,9 +20,7 @@
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-white bg-white">
-    <div class="container-fluid">
-        <br>
-        <br>
+    <div class="container-fluid pb-1">
         <a class="navbar-brand" href="#"><strong>Airplanes Ticket</strong></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -39,6 +37,9 @@
                     <a class="nav-link active" href="{{ route('contact')}}">Kontak</a>
                 </li>
             </ul>
+        </div>
+        <div class="d-flex">
+            <a href="{{ route('signup')}}" class="btn btn-light">SignUp</a>
         </div>
     </div>
 </nav>
