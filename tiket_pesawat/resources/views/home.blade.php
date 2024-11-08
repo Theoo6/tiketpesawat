@@ -22,7 +22,20 @@
             background-position: center; /* Menempatkan gambar di tengah */
             background-repeat: no-repeat; /* Menghindari gambar terulang */
             height: 100vh; /* Mengatur tinggi elemen (misal, seukuran layar) */
+            position: relative; /* Agar overlay bisa ditempatkan di atas gambar */
         }
+
+        .bg-image::after {
+            content: ""; /* Membuat elemen kosong */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3); /* Overlay gelap dengan opacity 0.3 untuk mengurangi kontras */
+            z-index: 1; /* Menempatkan overlay di atas gambar */
+        }
+
         .container {
             height: 100%; /* Full height of the parent */
         }
@@ -36,13 +49,20 @@
 
         h1, p {
             margin: 0;
+            
         }
+
+        /* Styling untuk card */
+        .card-img-top {
+            height: 200px; /* Atur tinggi gambar */
+            object-fit: cover; /* Agar gambar tidak terdistorsi */
+        }
+
     </style>
 </head>
 <body>
 
   <!-- Hero Section -->
-
   <div class="bg-image">
     <div class="container text-center text-white py-5 d-flex align-items-center justify-content-center">
         <div>
@@ -50,41 +70,51 @@
             <p>Pesan tiket pesawat dengan mudah dan cepat.</p>
         </div>
     </div>
-</div>
+  </div>
 
-  <!-- Tabel Hasil Pencarian Tiket -->
+  <!-- Card Penerbangan -->
   <div class="container mt-5">
-    <h2>Penerbangan</h2>
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th scope="col">Maskapai</th>
-          <th scope="col">Waktu Keberangkatan</th>
-          <th scope="col">Harga (per Penumpang)</th>
-          <th scope="col">Pilih</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Garuda Indonesia</td>
-          <td>10:00 AM</td>
-          <td>Rp 1.500.000</td>
-          <td><button class="btn btn-success">Pilih</button></td>
-        </tr>
-        <tr>
-          <td>AirAsia</td>
-          <td>12:30 PM</td>
-          <td>Rp 900.000</td>
-          <td><button class="btn btn-success">Pilih</button></td>
-        </tr>
-        <tr>
-          <td>Lion Air</td>
-          <td>3:00 PM</td>
-          <td>Rp 1.000.000</td>
-          <td><button class="btn btn-success">Pilih</button></td>
-        </tr>
-      </tbody>
-    </table>
+    <h2 class="mb-4">Berbagai Macam Penerbangan Kami</h2>
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/Garuda.jpg" class="card-img-top" alt="Garuda Indonesia">
+          <div class="card-body">
+            <h5 class="card-title">Garuda Indonesia</h5>
+            <p class="card-text">Keberangkatan: 10:00 AM</p>
+            <p class="card-text mb-1"><strong>Harga: Rp 1.500.000</strong></p>
+            <a href="#" class="btn btn-primary">Beli Tiket</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/AirAsia.jpeg" class="card-img-top" alt="AirAsia">
+          <div class="card-body">
+            <h5 class="card-title">AirAsia</h5>
+            <p class="card-text">Keberangkatan: 12:30 PM</p>
+            <p class="card-text mb-1"><strong>Harga: Rp 900.000</strong></p>
+            <a href="#" class="btn btn-primary">Beli Tiket</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/lion.png" class="card-img-top" alt="Lion Air">
+          <div class="card-body">
+            <h5 class="card-title">Lion Air</h5>
+            <p class="card-text">Keberangkatan: 3:00 PM</p>
+            <p class="card-text mb-1"><strong>Harga: Rp 1.000.000</strong></p>
+            <a href="#" class="btn btn-primary">Beli Tiket</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Footer -->
