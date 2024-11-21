@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
-    public function signup(){
-        return view('auth.signup');
+    public function register(){
+        return view('auth.register');
     }
 
     public function storeSignup(Request $request){
@@ -27,4 +27,11 @@ class AuthController extends Controller
 
         return redirect()->back()->with('success','Berhasil!');
     }
+
+    public function login()
+    {
+        return view('auth.login');
+    }
+
+
 }

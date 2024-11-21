@@ -42,7 +42,7 @@
     <!-- Navbar dengan sticky-top dan shadow -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Airplanes Ticket</a>
+            <a class="navbar-brand" href="#">Tiket Pesawat</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -52,15 +52,21 @@
                         <a class="nav-link active" href="{{ route('home')}}">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Pesan Tiket</a>
+                        <a class="nav-link active" href="{{ route ('tiket')}}">Pesan Tiket</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="{{ route('contact')}}">Kontak</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ route('users')}}">User</a>
+                    </li>
                 </ul>
             </div>
             <div class="d-flex">
-                <a href="{{ route('signup')}}" class="btn btn-outline-primary">SignUp</a>
+                <a href="{{ route('register')}}" class="btn btn-outline-primary">Register</a>
+            </div>
+            <div class="d-flex ms-2">
+                <a href="{{ route('login') }}" class="btn btn-outline-success">Login</a>
             </div>
         </div>
     </nav>
