@@ -24,3 +24,8 @@ Route::put('/users/{user}', [UserController::class, 'update'])->name('users.upda
 
 // Routes for ticket booking
 Route::get('/tiket', [TiketController::class, 'tiket'])->name('tiket');
+
+
+Route::get('halaman', function () {
+    return view('halaman');
+})->name('halaman');
