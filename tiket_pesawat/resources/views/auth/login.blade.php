@@ -130,21 +130,21 @@
                     </div>
                     <div class="card-body">
                         <!-- Success/Error messages -->
-                        @if(session('success'))
+                        @if (session('success'))
                             <div class="alert alert-success">
                                 {{ session('success') }}
                             </div>
                         @endif
-                        @if($errors->any())
+                        @if ($errors->any())
                             @foreach ($errors->all() as $error)
-                            <div class="alert alert-danger">
-                                {{ $error }}
-                            </div>
+                                <div class="alert alert-danger">
+                                    {{ $error }}
+                                </div>
                             @endforeach
                         @endif
 
                         <!-- Login Form -->
-                        <form method="POST" action="{{ route('home') }}">
+                        <form method="POST" action="{{ route('login.store') }}">
                             @csrf
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email:</label>

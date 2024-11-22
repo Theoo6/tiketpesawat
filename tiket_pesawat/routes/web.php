@@ -11,9 +11,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/contact', [ContactController::class, 'send'])->name('kontak.kirim');
+
 // routes/web.php
 Route::get('/register', [AuthController::class, 'register'])->name('register');
 Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/login-store', [AuthController::class, 'storeLogin'])->name('login.store');
 
 Route::post('/store-signup', [AuthController::class, 'storeSignup'])->name('storeSignup');
 
@@ -24,6 +27,7 @@ Route::put('/users/{user}', [UserController::class, 'update'])->name('users.upda
 
 // Routes for ticket booking
 Route::get('/tiket', [TiketController::class, 'tiket'])->name('tiket');
+Route::post('/tiket', [TiketController::class, 'tiket'])->name('tiket.kirim');
 
 
 Route::get('halaman', function () {
