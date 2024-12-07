@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Kaiadmin - Bootstrap 5 Admin Dashboard</title>
+    <title>Kategori</title>
     <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
     <link rel="icon" href="admin/assets/img/kaiadmin/favicon.ico" type="image/x-icon" />
 
@@ -136,26 +136,10 @@
                                     </form>
                                 </ul>
                             </li>
-                            <li class="nav-item topbar-user dropdown hidden-caret">
-                                <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#"
-                                    aria-expanded="false">
-                                    <div class="avatar-sm">
-                                        <img src="admin/assets/img/profile.jpg" alt="..."
-                                            class="avatar-img rounded-circle" />
-                                    </div>
-                                    <span class="profile-username">
-                                        <span class="op-7">Hi,</span>
-                                        <span class="fw-bold">Hizrian</span>
-                                    </span>
-                                </a>
-                                <ul class="dropdown-menu dropdown-user animated fadeIn">
-                                    <div class="dropdown-user-scroll scrollbar-outer">
-                                        <li>
-                                            <a class="dropdown-item" href="#">Logout</a>
-                                        </li>
-                                    </div>
-                                </ul>
-                            </li>
+                            @if(!Auth::check())
+                            @else
+                                <a href="{{ route('logout') }}" class="btn btn-outline-success">Logout</a>
+                            @endif
                         </ul>
                     </div>
                 </nav>
@@ -206,9 +190,6 @@
 
     <!-- jQuery Sparkline -->
     <script src="admin/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
-
-    <!-- Chart Circle -->
-    <script src="admin/assets/js/plugin/chart-circle/circles.min.js"></script>
 
     <!-- Datatables -->
     <script src="admin/assets/js/plugin/datatables/datatables.min.js"></script>

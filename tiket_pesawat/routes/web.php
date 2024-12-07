@@ -33,3 +33,9 @@ Route::post('/tiket', [TiketController::class, 'tiket'])->name('tiket.kirim');
 Route::get('halaman', function () {
     return view('halaman');
 })->name('halaman');
+
+
+Route::get('/logout', function () {
+    Auth::logout();
+    return redirect()->to('/')->with('success', 'Berhasil Logout');
+})->name('logout')->middleware('auth');
